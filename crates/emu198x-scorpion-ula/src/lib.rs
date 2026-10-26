@@ -8,10 +8,10 @@
 //! lines, 69,888 T/frame) but no contention — the Scorpion ULA never
 //! gates the CPU clock.
 
-use common_sinclair_zx_spectrum::memory::MemoryBus;
-use common_sinclair_zx_spectrum::timing::{self, FrameTiming};
-use common_sinclair_zx_spectrum::ula::Ula;
-use common_sinclair_zx_spectrum::ula_engine::{self, UlaEngine};
+use emu198x_bus_sinclair_zx_spectrum::MemoryBus;
+use emu198x_bus_sinclair_zx_spectrum::Ula;
+use emu198x_bus_sinclair_zx_spectrum::timing::{self, FrameTiming};
+use emu198x_sinclair_zx_spectrum_ula::{self as ula_engine, UlaEngine};
 
 #[derive(Clone, serde::Serialize, serde::Deserialize)]
 pub struct ScorpionUla {
